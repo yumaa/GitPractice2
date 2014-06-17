@@ -1,5 +1,7 @@
 package com.example.sample;
 
+import java.util.Calendar;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,6 +9,7 @@ import android.content.DialogInterface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+
 
 public class MainActivity extends Activity {
 
@@ -30,7 +33,10 @@ public class MainActivity extends Activity {
 
 	public void onButtonClick2(View v) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("タイトル").setMessage("メッセージ")
+		Calendar cal = Calendar.getInstance();
+		int day = cal.get(Calendar.DAY_OF_MONTH);
+		int month = cal.get(Calendar.MONTH) + 1;
+		builder.setTitle("タイトル").setMessage("今日は" + month + "月" + day + "日です。")
 				.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
