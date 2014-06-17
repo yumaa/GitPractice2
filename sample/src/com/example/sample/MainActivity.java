@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 
 	public void onButtonClick(View v) {
 		TextView tv = (TextView) findViewById(R.id.textview1);
-		tv.setText("sample");
+		tv.setText("Thank you for Kobajun teacher!!");
 	}
 
 	public void onButtonClick2(View v) {
@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 			case Calendar.FRIDAY: dow.append("‹à"); break;
 			case Calendar.SATURDAY: dow.append("“y"); break;
 		}
-		builder.setTitle("ƒ^ƒCƒgƒ‹").setMessage(year +"”N"+ month + "ŒŽ" + day + "“ú(" + dow + ")" + hour + "Žž" + minite + "•ª" + second + "•b")
+		builder.setTitle("Now!").setMessage(year +"”N"+ month + "ŒŽ" + day + "“ú(" + dow + ")" + hour + "Žž" + minite + "•ª" + second + "•b")
 				.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
