@@ -41,7 +41,17 @@ public class MainActivity extends Activity {
 		int hour = cal.get(Calendar.HOUR_OF_DAY);
 		int minite = cal.get(Calendar.MINUTE);
 		int second = cal.get(Calendar.SECOND);
-		builder.setTitle("タイトル").setMessage(year +"年"+ month + "月" + day + "日" + hour + "時" + minite + "分" + second + "秒")
+		StringBuffer dow = new StringBuffer();
+		switch(cal.get(Calendar.DAY_OF_WEEK)){
+			case Calendar.SUNDAY: dow.append("日"); break;
+			case Calendar.MONDAY: dow.append("月"); break;
+			case Calendar.TUESDAY: dow.append("火"); break;
+			case Calendar.WEDNESDAY: dow.append("水"); break;
+			case Calendar.THURSDAY: dow.append("木"); break;
+			case Calendar.FRIDAY: dow.append("金"); break;
+			case Calendar.SATURDAY: dow.append("土"); break;
+		}
+		builder.setTitle("タイトル").setMessage(year +"年"+ month + "月" + day + "日(" + dow + ")" + hour + "時" + minite + "分" + second + "秒")
 				.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
