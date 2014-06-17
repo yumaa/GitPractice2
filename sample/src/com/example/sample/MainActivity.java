@@ -29,8 +29,11 @@ public class MainActivity extends Activity {
 	}
 
 	public void onButtonClick2(View v) {
+		//Calender cal=  ;
+		//int day=cal.get(Calender.)
+		int day=7;
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("タイトル").setMessage("メッセージ")
+		builder.setTitle("タイトル").setMessage("今日は"+day)
 				.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
