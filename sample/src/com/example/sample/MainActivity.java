@@ -38,7 +38,10 @@ public class MainActivity extends Activity {
 		int year = cal.get(Calendar.YEAR);
 		int day = cal.get(Calendar.DAY_OF_MONTH);
 		int month = cal.get(Calendar.MONTH) + 1;
-		builder.setTitle("タイトル").setMessage("今日は" + year +"年"+ month + "月" + day + "日です。")
+		int hour = cal.get(Calendar.HOUR_OF_DAY);
+		int minite = cal.get(Calendar.MINUTE);
+		int second = cal.get(Calendar.SECOND);
+		builder.setTitle("タイトル").setMessage(year +"年"+ month + "月" + day + "日" + hour + "時" + minite + "分" + second + "秒")
 				.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
