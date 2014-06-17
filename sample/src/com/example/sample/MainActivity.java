@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 						// TODO Auto-generated method stub
 
 					}
-				}).show();
+				}).setCancelable(false).show();
 	}
 
 }
