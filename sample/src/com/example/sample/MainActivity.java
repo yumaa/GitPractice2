@@ -43,15 +43,15 @@ public class MainActivity extends Activity {
 		int second = cal.get(Calendar.SECOND);
 		StringBuffer dow = new StringBuffer();
 		switch(cal.get(Calendar.DAY_OF_WEEK)){
-			case Calendar.SUNDAY: dow.append("“ú"); break;
-			case Calendar.MONDAY: dow.append("Œ"); break;
-			case Calendar.TUESDAY: dow.append("‰Î"); break;
-			case Calendar.WEDNESDAY: dow.append("…"); break;
-			case Calendar.THURSDAY: dow.append("–Ø"); break;
-			case Calendar.FRIDAY: dow.append("‹à"); break;
-			case Calendar.SATURDAY: dow.append("“y"); break;
+			case Calendar.SUNDAY: dow.append("æ—¥"); break;
+			case Calendar.MONDAY: dow.append("ï¿½ï¿½"); break;
+			case Calendar.TUESDAY: dow.append("ï¿½ï¿½"); break;
+			case Calendar.WEDNESDAY: dow.append("ï¿½ï¿½"); break;
+			case Calendar.THURSDAY: dow.append("ï¿½ï¿½"); break;
+			case Calendar.FRIDAY: dow.append("ï¿½ï¿½"); break;
+			case Calendar.SATURDAY: dow.append("åœŸ"); break;
 		}
-		builder.setTitle("Now!").setMessage(year +"”N"+ month + "Œ" + day + "“ú(" + dow + ")" + hour + "" + minite + "•ª" + second + "•b")
+		builder.setTitle("Now!").setMessage(year +"ï¿½N"+ month + "ï¿½ï¿½" + day + "ï¿½ï¿½(" + dow + ")" + hour + "ï¿½ï¿½" + minite + "ï¿½ï¿½" + second + "ï¿½b")
 				.setPositiveButton("ok", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
